@@ -14,7 +14,7 @@ public class HandlingArrays : MonoBehaviour
     {
         WWW www = new WWW(API.baseURL + "/users");
         yield return www;
-        users = JsonHelper.getJsonArray<User>(www.text);
+        users = JsonHelper.FromJsonArray<User>(www.text);
         Debug.Log("Users: " + www.text);
     }
 }
